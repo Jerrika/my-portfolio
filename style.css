@@ -1,0 +1,17 @@
+/* Resetting default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the heading */
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+
+/* Styling a class */
+.my-class {
+    background-color: lightgray;
+    padding: 10px;
+}
