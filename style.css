@@ -1,17 +1,173 @@
-/* Resetting default margin and padding */
-body {
+* Reset default margin and padding */
+* {
     margin: 0;
-    padding: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/* Body styles */
+body {
+    font-family:'Roboto', sans-serif;
+    background: #333;
+    color: #70a3c1; /* Text color */
+}
+/* Apply glass effect to sections */
+section {
+    background: rgba(255, 255, 255, 0.8); /* Smoky white background color */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    color: #333; /* Text color */
+    padding: 0px;
+    margin: 0px 10px 10px; /* Increased top margin to 150px */
+    border-radius: 10px; /* Rounded corners */
+    overflow: auto; /* Enable scrolling */
+   
+}
+/* Apply 3D effect to content */
+h1, h2, h3, p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow for 3D effect */
 }
 
-/* Styling the heading */
-h1 {
-    color: blue;
+#h1 {
+color:#000000
+
+
+}
+/* Header styles */
+.header {
+    background-color: #333;
+    color: black;
+    text-align: right;
+    border: 1px solid #333;
+    padding: 20px;
+}
+/* Navigation styles */
+.nav {
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: right;
+        padding: 20px;
+        overflow: hidden;
+x        li {
+            border: 1px solid #302b4a;
+            padding: 10px;
+            margin: 5px;
+            box-shadow: 2px 2px 5px #333;
+            transition: box-shadow 0.3s;
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            &.active {
+                box-shadow: 5px 5px 10px #333;
+                background-color: #333;
+                color: white;
+            }
+        }
+    }
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    
+
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    font-size: large;
+    text-decoration: none;
+    color: white;
+    
+
+}
+
+.image-container {
+    background-color: #333; /* Dark gray background color */
+    padding:20px;
+    width:100%;
+    
+}
+
+.image-container img {
+    max-width: 45%; /* Resize image to fit container */
+    height: auto;
+    border-radius: 10px;
+    }
+    
+
+
+
+    .text-container {
+        color: #ffff;
+        display: inline-block;
+        align-items: left;
+        text-align: center;
+        width: 45%;
+        height: auto;
+        padding-left: 20px;
+        margin-top: -20px; /* Adjust this value to move the element higher up */
+    }
+
+
+/* Portfolio heading styles */
+#portfolio-heading {
     font-size: 24px;
 }
 
-/* Styling a class */
-.my-class {
-    background-color: lightgray;
-    padding: 10px;
+
+.about-me {
+    font-size: 16px; 
+    line-height: 1.5; 
+    margin: 2% 0; 
+    font-family: Arial, sans-serif; 
 }
+/* Footer styles */
+.contact {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height: 175px;
+    #contact-heading {
+        font-size: 12px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            margin-bottom: 0%;
+            a {
+                color: white;
+                text-decoration: none;
+
+            }
+        }
+    }
+}
+
+
+.thumbnail {
+  max-width: 200px; /* Set the width of the thumbnail */
+  border: 1px solid #ddd; /* Add a border around the thumbnail */
+  border-radius: 5px; /* Add rounded corners to the thumbnail */
+  padding: 5px; /* Add padding around the thumbnail */
+  
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+   
