@@ -1,6 +1,5 @@
 * Reset default margin and padding */
 * {
-    margin: 0;
     padding: 10px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -9,30 +8,38 @@
 body {
     font-family:'Roboto', sans-serif;
     background: #333;
-    color: #70a3c1; /* Text color */
+    color: #ffff; /* Text color */
+    min-width: auto;
 }
 /* Apply glass effect to sections */
 section {
-    background: rgba(255, 255, 255, 0.8); /* Smoky white background color */
+    background: rgba(133, 158, 165, 0.429); /* Smoky white background color */
     border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    color: #333; /* Text color */
+    color: #ffff; /* Text color */
     padding: 0px;
-    margin: 0px 10px 10px; /* Increased top margin to 150px */
+    margin: 0px 0px 10px; /* Increased top margin to 150px */
     border-radius: 10px; /* Rounded corners */
     overflow: auto; /* Enable scrolling */
+    line-height: 1.5em;
+
    
 }
 /* Apply 3D effect to content */
 h1, h2, h3, p {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow for 3D effect */
+    
+
 }
 
 #h1 {
 color:#000000
 
-
 }
+
+
+
+
 /* Header styles */
 .header {
     background-color: #333;
@@ -40,7 +47,11 @@ color:#000000
     text-align: right;
     border: 1px solid #333;
     padding: 20px;
+    height: auto;
 }
+
+
+
 /* Navigation styles */
 .nav {
     ul {
@@ -60,7 +71,7 @@ x        li {
                 text-decoration: none;
                 color: inherit;
             }
-            &.active {
+            .active {
                 box-shadow: 5px 5px 10px #333;
                 background-color: #333;
                 color: white;
@@ -70,10 +81,18 @@ x        li {
 }
 
 
+#portfolio {
+    display:inline-flex;
+    position: absolute;
+    top: -15px; 
+    left: 25px;
+    
+}
+
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     display: flex;
     justify-content: right;
     
@@ -92,15 +111,36 @@ x        li {
 
 }
 
+.text-container {
+    color: #ffff;
+    display: inline-block;
+    text-align: left;
+    float: right;
+    height: auto;
+    padding-left: 10px;
+    width: 60%;
+    top: 2%;
+    max-width: 600px;
+   
+    }
+    
+.about-me p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    margin: 0 0 0; 
+    font-family: Roboto, sans-serif; 
+    
+    }
+
 .image-container {
     background-color: #333; /* Dark gray background color */
     padding:20px;
-    width:100%;
+    width:50%;
     
 }
 
 .image-container img {
-    max-width: 45%; /* Resize image to fit container */
+    max-width: 70%; /* Resize image to fit container */
     height: auto;
     border-radius: 10px;
     }
@@ -108,40 +148,54 @@ x        li {
 
 
 
-    .text-container {
-        color: #ffff;
-        display: inline-block;
-        align-items: left;
-        text-align: center;
-        width: 45%;
-        height: auto;
-        padding-left: 20px;
-        margin-top: -20px; /* Adjust this value to move the element higher up */
-    }
-
-
 /* Portfolio heading styles */
 #portfolio-heading {
     font-size: 24px;
 }
 
+#heading-text {
+font-size:x-large;
+margin: 2% 0; 
+font-family: Roboto, sans-serif; 
+width: 60%;
+align-content: right;
+padding-top:80px;
 
-.about-me {
-    font-size: 16px; 
-    line-height: 1.5; 
-    margin: 2% 0; 
-    font-family: Arial, sans-serif; 
 }
-/* Footer styles */
-.contact {
+
+
+.content-text {
+    transform: scale(1.1);
+    text-align: left;
     display: flex;
+  justify-content: space-between;
+
+
+}
+
+.content-image {
+    text-align: center;
+    display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+
+}
+
+
+/* Footer styles */
+.contact h3 {
+width: 100%;
+}
+
+.contact {
+    display: inline;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-    height: 175px;
-    #contact-heading {
-        font-size: 12px;
-    }
+    padding: 0px;
+    height: 10%;
+    
     ul {
         list-style-type: none;
         padding: 0;
@@ -157,6 +211,26 @@ x        li {
 }
 
 
+.contact ul {
+    list-style-type: none;
+    background-color: #333;
+    width: 100%;
+ 
+}
+
+.contact ul li {
+    display: inline-block;
+    margin: 20px 10px;
+}
+
+.contact a {
+    background-color: #333;
+    color:white;
+    text-decoration: none;
+}
+
+/*Resume photo*/
+
 .thumbnail {
   max-width: 200px; /* Set the width of the thumbnail */
   border: 1px solid #ddd; /* Add a border around the thumbnail */
@@ -165,9 +239,44 @@ x        li {
   
 }
 
+/*Hover Feature + Download*/
+.project {
+    position: relative;
+    display: inline-block;
+}
+
+.preview-image {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.download-link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    color: white;
+    background-color: #333;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.project:hover .preview-image {
+    transform: scale(1.1);
+}
+
+.project:hover .download-link {
+    display: block;
+}
+
+
+
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
     }
-   
+}
