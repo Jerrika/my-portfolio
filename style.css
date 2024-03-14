@@ -32,18 +32,8 @@ h1, h2, h3, p {
 
 }
 
-p .summary {
-justify-content: space-evenly;  
 
 
-}
-
-#summary-git {
-    width: min-content;  
-    
-    
-    
-    }
 
 #h1 {
 color:#000000
@@ -192,7 +182,7 @@ justify-content: space-evenly;
 .content-text  { 
     text-align: left;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     }
    
     
